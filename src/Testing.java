@@ -7,7 +7,7 @@ public class Testing {
     public static void main(String[] args) {
         HtmlUnitDriver driver = new HtmlUnitDriver(BrowserVersion.FIREFOX);
         try {
-            driver.get("http://localhost:8080/NewQAServer/");
+            driver.get("http://172.31.11.58:8080/testapp/");
             System.out.println(driver.getCurrentUrl());
 
             String expmsg = "Hello, World!";
