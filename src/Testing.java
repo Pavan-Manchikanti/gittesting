@@ -11,14 +11,22 @@ public class Testing {
 	 */
 	public static void main(String[] args) {
 		HtmlUnitDriver driver=new HtmlUnitDriver(BrowserVersion.FIREFOX_38);
-		driver.get("http://172.31.11.58:8080/testapp");
+		driver.get("http://localhost:8899/qaenv/");
 		System.out.println(driver.getCurrentUrl());
-		System.out.println("Login Page Displayed Successfully");
-		System.out.println("Testing Passed");
-		
-		
-		driver.close();		
+		String expmsg="Hello, World!";
+		String actmsg=driver.findElement(By.xpath("html/body")).getText();
+		System.out.println("Expected Message : "+expmsg);
+		System.out.println("Actual Message   : "+actmsg);
+		if(expmsg.equals(actmsg))
+		{
+			System.out.println("Testing has Passed");
+		}
+		else
+		{
+			System.out.println("Testing has Failed");
+		}
+		driver.close();
+	}
 
 	}
 
-}
