@@ -11,7 +11,7 @@ public class Testing {
 	 */
 	public static void main(String[] args) {
 		HtmlUnitDriver driver=new HtmlUnitDriver(BrowserVersion.FIREFOX_38);
-		driver.get("http://172.31.11.58:8080/testapp");
+		driver.get("http://172.31.18.141:8080/testapp");
 		System.out.println(driver.getCurrentUrl());
 		System.out.println("Login Page Displayed Successfully");
 		System.out.println("Testing Passed");
